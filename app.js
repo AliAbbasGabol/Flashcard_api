@@ -20,11 +20,11 @@ function createCard(data) {
 
   const front = document.createElement("div");
   front.className = "card-face front";
-  front.textContent = data.answer;
+  front.textContent = data.question;
 
   const back = document.createElement("div");
   back.className = "card-face back";
-  back.textContent = data.question;
+  back.textContent = data.answer;
 
   card.append(front, back);
   scene.appendChild(card);
