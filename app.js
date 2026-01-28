@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:5000/Flashcards';
+const API_URL = 'https://aliabbasgabol.pythonanywhere.com/Flashcards';
 const cardList = document.getElementById("cardList");
 
 fetch(API_URL)
