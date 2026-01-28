@@ -1,0 +1,48 @@
+body {
+  font-family: sans-serif;
+  background: #111;
+  color: white;
+}
+
+.card-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.scene {
+  perspective: 1000px;
+}
+
+.card {
+  height: 160px;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+  cursor: pointer;
+}
+
+.card.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.card-face {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.front {
+  background: #2563eb;
+}
+
+.back {
+  background: #16a34a;
+  transform: rotateY(180deg);
+}
