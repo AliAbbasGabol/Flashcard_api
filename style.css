@@ -46,3 +46,12 @@ body {
   background: #16a34a;
   transform: rotateY(180deg);
 }
+pre code {
+  font-family: "Fira Code", "JetBrains Mono", monospace;
+  font-size: 14px;
+}
+
+pre {
+  border-radius: 8px;
+  padding: 16px;
+}

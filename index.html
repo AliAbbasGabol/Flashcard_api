@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet"
+ href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/vs2015.min.css">
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+
   <meta charset="UTF-8">
   <title>Flashcards</title>
   <link rel="stylesheet" href="style.css">
@@ -12,10 +18,15 @@
 
   <script src="app.js" defer></script>
 
+  <h2>GET request for API using CURL. example</h2>
+<pre><code class="language-bash">curl -X GET https://aliabbasgabol.pythonanywhere.com/Flashcards
+</code></pre>
+  <h2>POST request for api using CURL. example</h2>
+<pre><code class="language-bash">curl -X POST https://aliabbasgabol.pythonanywhere.com/Flashcards ^
+ -H "Content-Type: application/json" ^
+ -d "{\"question\":\"what is fire\",\"answer\":\"fire\"}"
+</code></pre>
 
-  <h2>Get request for api </h2>
-  <code>curl https://aliabbasgabol.pythonanywhere.com/Flashcards
-</code>
 
 </body>
 </html>
