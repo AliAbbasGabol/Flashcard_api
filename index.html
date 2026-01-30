@@ -19,14 +19,33 @@
   <script src="app.js" defer></script>
 
   <h2>GET request for API using CURL. example</h2>
-<pre><code class="language-bash">curl -X GET https://aliabbasgabol.pythonanywhere.com/Flashcards
+<pre><code class="language-bash">curl --location 'https://aliabbasgabol.pythonanywhere.com/Flashcards'
 </code></pre>
   <h2>POST request for api using CURL. example</h2>
-<pre><code class="language-bash">curl -X POST https://aliabbasgabol.pythonanywhere.com/Flashcards ^
- -H "Content-Type: application/json" ^
- -d "{\"question\":\"what is fire\",\"answer\":\"fire\"}"
+<pre><code class="language-bash">curl --location 'https://aliabbasgabol.pythonanywhere.com/Flashcards' \
+--header 'Content-Type: application/json' \
+--data '{
+    "question": "what is fire",
+    "answer":"fire"
+}'
 </code></pre>
-
-
+<h2>PUT request for api using CURL. example</h2>
+<pre><code class="language-bash">
+curl --location --request PUT 'https://aliabbasgabol.pythonanywhere.com/Flashcards' \
+--header 'Content-Type: application/json' \
+--data '{
+    "question": "what is fire",
+    "answer":"fire",
+    "id": 1
+}'
+</code></pre>
+<h2>DELETE request for  api using CURL. example</h2>
+<pre><code class="language-bash"> 
+  curl --location --request DELETE 'https://aliabbasgabol.pythonanywhere.com/Flashcards' \
+--header 'Content-Type: application/json' \
+--data '{
+    "id": 1
+}'
+</code></pre>
 </body>
 </html>
